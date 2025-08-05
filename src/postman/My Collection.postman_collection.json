@@ -1,0 +1,433 @@
+{
+	"info": {
+		"_postman_id": "902e57a8-c2bc-4c3b-b633-c36283c54fb7",
+		"name": "My Collection",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47283909",
+		"_collection_link": "https://omspatil15-15944.postman.co/workspace/Om-Patil's-Workspace~b16a18dc-b967-4f5b-86f5-6bb80a980415/collection/47283909-902e57a8-c2bc-4c3b-b633-c36283c54fb7?action=share&source=collection_link&creator=47283909"
+	},
+	"item": [
+		{
+			"name": "Category & Product Crud Operation",
+			"item": [
+				{
+					"name": "Category Api",
+					"item": [
+						{
+							"name": "Getallthecategories",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6464/api/categories?page=3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6464",
+									"path": [
+										"api",
+										"categories"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Postcreateanewcategory",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Grocery\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6464/api/categories/save",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6464",
+									"path": [
+										"api",
+										"categories",
+										"save"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getcategorybyid",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Grocery\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6464/api/categories/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6464",
+									"path": [
+										"api",
+										"categories",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "putupdatecategorybyid",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Grocery\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6464/api/categories/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6464",
+									"path": [
+										"api",
+										"categories",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletecategorybyid",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Grocery\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6464/api/categories/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6464",
+									"path": [
+										"api",
+										"categories",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product Api",
+					"item": [
+						{
+							"name": "Postcreateanewproduct",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Fan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6464/api/products/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6464",
+									"path": [
+										"api",
+										"products",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Getproductbyid",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Fan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6464/api/products/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6464",
+									"path": [
+										"api",
+										"products",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Putupdateproductbyid",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Fan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6464/api/products/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6464",
+									"path": [
+										"api",
+										"products",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deleteproductbyid",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Fan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6464/api/products/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6464",
+									"path": [
+										"api",
+										"products",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Getalltheproducts",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Fan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6565/api/products/find?page=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6565",
+									"path": [
+										"api",
+										"products",
+										"find"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Pagination",
+					"item": [
+						{
+							"name": "Pagination 1",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6565/api/categories/2?page=1size=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6565",
+									"path": [
+										"api",
+										"categories",
+										"2"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1size=5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pagination 2",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6565/api/categories/1?page=0size=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6565",
+									"path": [
+										"api",
+										"categories",
+										"1"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0size=5"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
